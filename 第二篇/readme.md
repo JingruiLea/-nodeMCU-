@@ -75,12 +75,12 @@ end)
 + `args`的值可以为整数, 字符串, json字符串, 代表当前命令的参数.  
 
 全部示例如下:
-|消息原型| CMD | 解释 | ARGS | 解释
-|-| :-: | :-: | :-: | :-:|
-|{"cmd":"setBrightness", "args":120}|setBrightness|设定亮度|120|亮度值(整数, min:0,max1000)
-|{"cmd":"setName", "args":"客厅顶灯"}|setName|设定灯的名字|客厅顶灯|灯的名字(字符串)
-|{"cmd":"setInterval", "args":2000}|setInterval|设定传感器感应间隔|2000|(整数 ,单位: 毫秒, 最小值: 200)
-|{"cmd":"setColor", "args":{"r":120,"g":120,"b":120}}|setColor|设定灯的颜色|RGB:120,120,120|颜色的rgb值(json字符串)
+|消息原型| CMD | 解释 | ARGS | 解释|
+|:-----:| :-: | :--: | :--: | :-:|
+|{"cmd":"setBrightness", "args":120}|setBrightness|设定亮度|120|亮度值(整数, min:0,max1000)|
+|{"cmd":"setName", "args":"客厅顶灯"}|setName|设定灯的名字|客厅顶灯|灯的名字(字符串)|
+|{"cmd":"setInterval", "args":2000}|setInterval|设定传感器感应间隔|2000|(整数 ,单位: 毫秒, 最小值: 200)|
+|{"cmd":"setColor", "args":{"r":120,"g":120,"b":120}}|setColor|设定灯的颜色|RGB:120,120,120|颜色的rgb值(json字符串)|
 ## 推荐的消息解析器设计(需要添加自动重连功能)
 下面是推荐的消息解析器设计, 通过dis数组和dispatch函数对命令进行分发.  
 只实现了`setName`和`setBrightness`命令
