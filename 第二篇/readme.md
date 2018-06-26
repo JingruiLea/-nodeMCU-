@@ -61,6 +61,10 @@ sk:on("receive", function(sck, message)
     print(message)  --不管收到什么,打印
 end)
 ```
+运行这个脚本,你将会看到如下输出:
+#### Java控制台
+
+#### NodeMCU控制台
 
 ## 设计通信协议
 ### 设计一个通信协议, 实现灯的控制和对环境的感知.
