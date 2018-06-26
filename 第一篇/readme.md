@@ -28,6 +28,8 @@ wifi.setmode(wifi.STATION)
 wifi.sta.config{ssid="SSID", pwd="password"}
 ```
 ESPlorer提供了实时调试的功能, 按图示操作, 可以让NodeMCU接入附近的Wi-Fi.
+![编辑Snippets](./编辑Snippets.png)
+![Wi-Fi](./wifi.png)
 
 ## 控制LED开关(GPIO)
 *****************
