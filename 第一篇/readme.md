@@ -65,7 +65,7 @@ pwm.setduty(5, 200)
 {"name":"light001", "ip":"192.168.31.2", "red":0, "green":0, "blue":0}
 ```
 ### Lua Table
->table 是 Lua 的一种数据结构用来帮助我们创建不同的数据类型，如：数组、字典等
+>table 是 Lua 的一种数据结构, 用来帮助我们创建不同的数据类型，如：数组、字典等
 
 `table0 = {"cmd"="openlight"}` 是一个合法Lua语句, 该语句定义了一个表`table0`, 并且, `table0["cmd"] = "openlight"`. 同样非常易于理解. 
 该语句等价于:  
