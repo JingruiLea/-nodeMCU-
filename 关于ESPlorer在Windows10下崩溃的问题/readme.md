@@ -1,4 +1,4 @@
-#关于ESPlorer在Windows 10 & OpenJDK 9/10 环境下崩溃的问题
+# 关于ESPlorer在Windows 10 & OpenJDK 9/10 环境下崩溃的问题
 
 ESPlorer是比较好用的nodeMCU的IDE,但是在Win10(x64).OpenJDK9或10下打开串口就会崩溃,JVM错入报告如下:
 ```text
