@@ -7,10 +7,13 @@ NodeMCU是一个开源的物联网平台, 它使用Lua脚本语言编程. 基于
 首先, 我们需要如下几个软件: `(以下给出了下载地址)`   
 
 1. NodeMCU的烧录器:  
-windows: https://github.com/marcelstoer/nodemcu-pyflasher  
-Mac: https://github.com/marcelstoer/nodemcu-pyflasher
+**windows:**   
+https://github.com/nodemcu/nodemcu-flasher
+https://github.com/marcelstoer/nodemcu-pyflasher  
+**Mac/Linux:**   
+https://github.com/marcelstoer/nodemcu-pyflasher
 2. NodeMCU的固件:  
-你可以从[此地址](http://nodemcu-build.com/)自由构建一个可选择功能的固件镜像, 也可以使用我们提供的镜像(稍后添加), 包含了本实验需要的基本模块.  
+你可以从[此地址](http://nodemcu-build.com/)自由构建一个可选择功能的固件镜像, 也可以使用我们提供的镜像(**群文件**), 包含了本实验需要的基本模块.  
 基本模块如下: adc, file, gpio, i2c, net, node, pwm, sjson, tmr, uart, wifi.
 3. NodeMCU的编程器(IDE):  
 [ESPlorer](https://esp8266.ru/esplorer/)是NodeMCU的IDE, 可以轻松完成配置, 代码上传, 调试等工作.

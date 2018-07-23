@@ -95,7 +95,7 @@ https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
 可以看到我这里是J盘，注意你看到的可能和我不同，请记下你的盘符。
 
 3、打开Win32 DiskImager，界面如下。
-
+ 
 
 
 点击Image File下面一行右边的蓝色图标，选择镜像。这里选择上一步解压缩得到的系统。
