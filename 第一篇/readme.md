@@ -40,7 +40,7 @@ ESPlorer提供了实时调试的功能, 按图示操作, 可以让NodeMCU接入�
 本次实验提供的LED为RGB共阳极LED, 只要将最长的引脚连接到VCC, 其余三个任选一个接地, 就可以发出颜色, 你可以选择任何一个喜欢的颜色做下面的实验.
 最长的引脚接VCC, 任意引脚接D5引脚, 在Snippet2运行以下代码.
 ```Lua
-local pin = 5 
+pin = 5 
 gpio.mode(pin, gpio.OUTPUT)
 gpio.write(pin, gpio.LOW)
 ```
