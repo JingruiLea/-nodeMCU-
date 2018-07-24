@@ -42,7 +42,7 @@ ESPlorer提供了实时调试的功能, 按图示操作, 可以让NodeMCU接入�
 ```Lua
 local pin = 5 
 gpio.mode(pin, gpio.OUTPUT)
-gpio.write(pin, gpio.HIGH)
+gpio.write(pin, gpio.LOW)
 ```
 点亮LED.
 
