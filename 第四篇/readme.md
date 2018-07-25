@@ -9,7 +9,14 @@
 ### 连接到Kura™控制台
 如果您的树莓派带有显示屏, 请在浏览器中输入树莓派IP地址.  
 如果您的电脑和树莓派在同一个局域网内(通过网线或Wi-Fi连接), 请在浏览器中输入树莓派IP地址.  
-默认的用户名和密码是Kura和admin  
+默认的用户名和密码是admin和admin  
 `(if i remeber...)`
-
+进入控制台中心
+![console](./console.png)
 ### 按照图示操作, 配置树莓派Wi-Fi Access Point
+选择`Network`
+![选择`Network`](./choose_Network.png)
+选择`wlan0`
+![选择`Network`](./wlan0.png)
+设置密码
+![选择`Network`](./settingPassword.png)
