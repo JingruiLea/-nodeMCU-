@@ -98,3 +98,5 @@ end)
 采用三个按钮, 每个颜色设置5个挡位, 当按钮按下时, NodeMCU按顺序切换挡位, 调整灯泡亮度.
 
 相关文章: [NodeMCU(ESP8266) - 设置按键中断时遇到的坑](https://zhuanlan.zhihu.com/p/35097181)
+
+没勾选pwm,没插入nodemcu,没插好针脚.
