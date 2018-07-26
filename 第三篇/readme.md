@@ -57,10 +57,10 @@ end)
 ```Lua
     dis = {}
     dis['setName'] = setName
-    dis['setBrightness'] = setBrightness --dis(数组下标) = 函数引用
-    --如果要调用setName 可以写作 dis['setName']()
+    dis['setBrightness'] = setBrightness 
+    --dis(数组下标) = 函数引用
 ```
-
+如果要调用`setName`函数, 可以写作 `dis['setName']()`
 然后, 用`dispatch`函数分发服务器传来的命令.
 
 ```Lua
@@ -94,3 +94,9 @@ sk:on("connection", function(sck, c)
 end)
 
 ```
+
+假设服务器传来消息`{"cmd":"setBrightness", "args":120}`,`dispath`函数解析后, `pack.cmd = 'setBrightness'`, 调用`dis['setBrightness'](pack)`, 也就是调用`setBrightness`函数, 这样在`setBrightness`函数中就可以通过`pack.args`获得`120`这个值.  
+
+假设服务器传来消息`{"cmd":"setColor", "args":{"r":120,"g":120,"b":120}}`,`dispath`函数解析后, 在`setColor`函数中就可以通过`pack.args.r`获得红灯亮度值.
+
+**加函数时, 不要忘记加映射, dispatch['set\*\*\*']=set\*\*\***
