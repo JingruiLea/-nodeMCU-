@@ -14,7 +14,7 @@ net.createServer(function (socket) {
         socket.remoteAddress + ':' + socket.remotePort)
 
     socket.on('data', function (data) {
-        console.log(data) //打印所有数据到控制台
+        console.log(data.toString()) //打印所有数据到控制台
         socket.write('客户端你好!')
     });
 
