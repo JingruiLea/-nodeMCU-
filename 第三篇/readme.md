@@ -19,20 +19,17 @@
 |{"cmd":"setName", "args":"客厅顶灯"}|setName|设定灯的名字|客厅顶灯|灯的名字(字符串)|
 |{"cmd":"setInterval", "args":2000}|setInterval|设定传感器感应间隔|2000|(整数 ,单位: 毫秒, 最小值: 200)|
 |{"cmd":"setColor", "args":{"r":120,"g":120,"b":120}}|setColor|设定灯的颜色|RGB:120,120,120|颜色的rgb值(json字符串)|
+
+
+
+
 ## 推荐的消息解析器设计(需要添加自动重连功能)
 下面是推荐的消息解析器设计, 通过dis数组和dispatch函数对命令进行分发.  
+消息解析器只是一种编程技巧, 直接的实现方式如下:
 只实现了`setName`和`setBrightness`命令
-```Lua
-dis = {}
-function dispatch(client, message)         --分发函数
-     print("receive message: "..message)   --将收到的内容打印
-     local pack = sjson.decode(message)    --解析消息
-     if pack.cmd~=nil and dis[pack.cmd] then   --如果消息的'cmd'不为空
-          dis[pack.cmd](pack)              --调用与cmd内容同名的函数
-     end
-end
 
-function setName(pack)
+```Lua
+function setName(name)
    -- your code
 end
 
@@ -43,8 +40,57 @@ end
 sk = net.createConnection(net.TCP, 0)
 sk:connect(10086, '192.168.3.3')
 sk:on("disconnection", function(c)end)
-sk:on("receive", dispatch)
+sk:on("receive", function(sck, msg)
+    local pack = sjson.decode(message)    
+    if pack.cmd == 'setName' then  
+        setName(pack.name)    
+    elseif pack.cmd == 'setBrightness' then
+        setBrightness(pack.brightness)       
+    end
+end)
 sk:on("connection", function(sck, c)
     print('connected')
 end)
+```
+下面介绍一种比较推荐的实现方式.
+ 首先, 我们使用一个名为dis的`Lua Table`储存相应的处理函数.
+```Lua
+    dis = {}
+    dis['setName'] = setName
+    dis['setBrightness'] = setBrightness --dis(数组下标) = 函数引用
+    --如果要调用setName 可以写作 dis['setName']()
+```
+
+然后, 用`dispatch`函数分发服务器传来的命令.
+
+```Lua
+function setName(pack)
+   -- your code
+end
+
+function setBrightness(pack)
+   -- your code
+end
+
+dis = {}
+
+function dispatch(client, message)         --分发函数
+     print("receive message: "..message)   --将收到的内容打印
+     local pack = sjson.decode(message)    --解析消息
+     if pack.cmd~=nil and dis[pack.cmd] then   --如果消息的'cmd'不为空
+          dis[pack.cmd](pack)              --调用与cmd内容同名的函数
+     end
+end
+
+dis['setName'] = setName
+dis['setBrightness'] = setBrightness
+
+sk = net.createConnection(net.TCP, 0)
+sk:connect(10086, '192.168.3.3')
+sk:on("disconnection", function(c)end)
+sk:on("receive", dispatch) --收到消息时,直接调用dispath函数
+sk:on("connection", function(sck, c)
+    print('connected')
+end)
+
 ```
