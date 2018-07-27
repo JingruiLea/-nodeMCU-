@@ -20,3 +20,20 @@
 ![选择`Network`](./wlan0.png)
 设置密码
 ![选择`Network`](./settingPassword.png)
+
+
+### 关闭kura防火墙
+按照如下所示, 关闭kura防火墙, 以免数据传输被拒绝.
+![firewall](./firewall.png)
+![newrule](./newrule.png)
+按下图填写
+![fillrule](./fillRule.png)
+点击`submit`
+点击`apply`
+![apply](./apply.png)
+
+
+### 关闭windows防火墙
+百度 关闭windows防火墙
+依次关闭下面三个:
+![winFirewall.png]
