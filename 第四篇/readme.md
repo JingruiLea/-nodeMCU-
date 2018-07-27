@@ -36,4 +36,4 @@
 ### 关闭windows防火墙
 百度 关闭windows防火墙
 依次关闭下面三个:
-![winFirewall.png]
+![winFirewall.png](./winFirewall.png)
