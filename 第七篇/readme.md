@@ -107,7 +107,7 @@ lampList: [
 
 # changeRed(red)
 改变红灯时运行此方法
-+ `red` <`Number`> 范围 `0-255`
++ `red` <`Number`> 范围 `0-100`
 
 # changeBlue(blue)
 改变蓝灯时
