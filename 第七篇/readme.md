@@ -76,7 +76,7 @@ socket.send('嘤嘤嘤')
 ## bus.lamplist.item
 + <`Object`>对象
 + name <`String`> 必须, 表示灯泡名字, 用以展示  
-+ id <`Number`> 可选的, 表示灯泡ID
++ id <`Number`> 必须, 表示灯泡ID, 用来索引
 + voltage <`Number`> 可选的, 表示电压, 不填则永远满电.   
 + 其他项目顾名思义都是可选的!!!不会就问我吧..   
 下面是默认示例:
