@@ -1,7 +1,10 @@
 var net = require('net')
 var PORT = 10086
 var HOST = '0.0.0.0'
+var nodemcu,android
 net.createServer(function (socket) {
+    nodemcu = socket
+
     console.log('CONNECTED: ' +
         socket.remoteAddress + ':' + socket.remotePort)
 
