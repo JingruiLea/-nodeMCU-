@@ -13,7 +13,7 @@ git pull
 如果你不放心, 可以与git上的代码对比, 看是否一样.  
 如果想要恢复你的现场:
 ```Bash
-git pop stash
+git stash pop
 ```
 > PS : 学习Git, git stash, git pull 的使用, 以备不时之需.
 
