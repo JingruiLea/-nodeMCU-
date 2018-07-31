@@ -24,20 +24,11 @@ https://cloud.baidu.com/doc/IOT/GettingStarted.html
 
 ## 在LampServer.js中使用
 ```JavaScript
-const mqc = require('./mqtt.js')
-
-mqc.onerror = function(err){
-
-}
-
-mqc.onconnect = function(){
-    console.log('conneawrfteryjct')
-    mqc.send('hello')
-}
-
-mqc.onmessage = function(topic, payload, packet){
-    console.log(payload.toString())
-}
-
+const webs = require('./WebSocket')
 ```
+修改为
+```JavaScript
+const webs = require('./mqtt')
+```
+即可
 
