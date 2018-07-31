@@ -1,4 +1,7 @@
 # 外网通信
+
+## MQTT版本的服务器和客户端和websocket完全分开,MQTT版本客户端将部署到我们的外网服务器上,做完之后可以把dist和index.html发我,服务端部署在树莓派上!
+
 ## 学习MQTT协议
 
 https://cloud.baidu.com/doc/IOT/GettingStarted.html
