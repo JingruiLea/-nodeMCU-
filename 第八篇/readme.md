@@ -29,13 +29,18 @@ npm run build
 ```
 4. 移动`NodeMCULightWeb/dist`下的`static`文件夹和`index.html`,到`NodeMCULightBackground/public`下.
 5. 启动服务器,进入 [http://localhost:8080](http://localhost:8080) 即可看到打包好的页面.
-6. 将`NodeMCULightBackground`工程用`scp`命令(自行百度)拷贝到树莓派.  
+6. `ssh`登陆树莓派并运行:
+```Bash
+sudo chmod -R 777 /var/www
+```
+将`NodeMCULightBackground`工程用`scp`命令(自行百度)拷贝到树莓派.  
 树莓派用户名: `pi`  
 密码: `raspberry`  
-示例:
+示例:(在`VS Code`下)
 ```Bash
 scp -r ./* pi@172.16.1.1:/var/www/
 ```
+
 7. `ssh`连接树莓派并启动服务器.
 ```Bash
 ssh pi@172.16.1.1
