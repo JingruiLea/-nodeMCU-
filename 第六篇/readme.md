@@ -40,6 +40,11 @@ npm run dev
 git clone https://github.com/1079805974/NodeMCULightBackground.git
 ```
 用`VS Code`打开文件夹.打开`./bin/LampServer.js`,运行.
+```Bash
+npm install
+cd bin
+node LampServer
+```
 > 控制台输出:服务器启动成功!
 
 转到前端界面, 选择一个灯, 点击开关, 即可给服务器发送消息, 相关代码在`./bus.js`中, 可以自行查看.效果如下.
